@@ -18,6 +18,7 @@ nav ul {
     list-style: none;
     position: relative;
     display: block;
+    background-color: black;
 }
 nav ul li{
     display: inline-block;
@@ -40,7 +41,7 @@ nav ul ul {
 }
 /* hover */
 nav a:hover{
-    background-color: black;
+    background-color: gray;
 }
 /* Display Dropdown on Hover */
 nav ul li:hover > ul {
