@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[Test] Home | Technology Conference Hamburg</title>
     <link rel="stylesheet" href="Styles/styles.css">
+
+    <!-- Alle Skripte, die eingesetzt werden-->
+    <script type="text/javascript" src="Scripts/countdownTimer.js"></script>
 </head>
 
 <body>
@@ -36,11 +39,20 @@
         </section>
         <section id="when-where">
             <h1>Wo und wann?</h1>
-            <p>Die TCH findet am [Datum] statt</p> <br>
-            <p>Counter</p> <br>
-            <p>TT:HH:MM:SS</p>
-            <iframe width="480" height="320" style="border:0" loading="lazy" allowfullscreen
-                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJuRMYfoNhsUcRoDrWe_I9JgQ&key=AIzaSyDi2WjAdzaUgY1PZRKkBgmPmfSnqF5vmyw"></iframe>
+            <div class="wann">
+                <p id="countdown-info"></p> <br>
+                <p id="countdown-tage"></p>
+                <p id="countdown-stunden"></p>
+                <p id="countdown-minuten"></p>
+                <p id="countdown-sekunden"></p>
+                <h2 id="coundown-ende"></h2>
+                <br>
+                <p class="countdown-desription">TT:HH:MM:SS</p>
+            </div>
+            <div class="wo">
+                <iframe width="480" height="320" style="border:0" loading="lazy" allowfullscreen
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJuRMYfoNhsUcRoDrWe_I9JgQ&key=AIzaSyDi2WjAdzaUgY1PZRKkBgmPmfSnqF5vmyw"></iframe>
+            </div>
         </section>
         <section id="sessions">
             <h1>Sessions</h1>
