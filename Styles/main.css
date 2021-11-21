@@ -1,0 +1,272 @@
+@viewport {
+    zoom: 1.0;
+    width: device-width;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+:root {
+    /* Colors */
+    --color-primary: #f9f800;
+    --color-lightgray: #d3d3d3;
+    --color-secondary: #ffffff;
+    --color-background: #262626;
+    --color-nav-background: rgba(0,0,0,0.3);
+    /* Sizes */
+    --height-nav: 60px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-secondary);
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    border-bottom-color: var(--color-lightgray);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+nav {
+    width: 100%;
+    height: var(--height-nav);
+    top: 0;
+    z-index: 10;
+    position: fixed;
+    display: flex;
+    background: var(--color-nav-background);
+    user-select: none;
+}
+
+    nav ul {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        list-style: none;
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 0 1rem;
+        padding: 1rem;
+    }
+
+    nav a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--color-secondary);
+    }
+
+    nav a:hover {
+        color: var(--color-primary);
+    }
+
+#tch-logo {
+    background: rgba(0,0,0,0.3);
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+
+}
+
+/* Sections */
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+    section#home {
+        /*background-color: lightseagreen;*/
+        background: url(../images/tch-wave.png);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        flex-direction: row;
+    }
+
+    section#about {
+        background-color: var(--color-background);
+        text-align: center;
+    }
+
+    section#when-where {
+        background-color: var(--color-background);;
+    }
+
+    section#sessions {
+        background-color: var(--color-background);;
+    }
+
+    section#contact {
+        background-color: var(--color-background);;
+    }
+
+    section#imprint {
+        background-color: var(--color-background);;
+    }
+
+/* Section Content */
+
+#introHeader {
+    margin: 75px;
+}
+
+#introText {
+    min-width: 400px;
+    max-width: 600px;
+    margin: 75px;
+}
+
+#sessionArea {
+    width: 90%;
+    text-align: left;
+}
+
+#timetable {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.timetable-row {
+    width: 40%;
+}
+
+.timetable-row h2{
+    text-align: center;
+    font-size: 36px;
+}
+
+#contactArea {
+    float: left;
+    height: 45%;
+    margin-top: 10%;
+    flex-direction: row;
+    width: 90%;
+    text-align: left;
+}
+
+#footerArea {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+    height: 45%;
+}
+
+.footer-item {
+    margin: 20px;
+    text-align: center;
+    width: 30%;
+}
+
+#socials {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+/* Styles for faq */
+section#faq {
+    background-color: var(--color-background);;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    user-select: none;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 5%;
+    margin-left: 10%;
+    text-align: left;
+    font-size: 24px;
+}
+
+details {
+    color: var(--color-secondary);
+}
+
+summary {
+    color: var(--color-primary);
+}
+
+.fab {
+    font-family: "Font Awesome 5 Brands";
+    font-size: 32px;
+    color: var(--color-primary);
+}
+
+/* Styles for registration */
+input {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    border-color: var(--color-secondary);
+    height: 24px;
+    width: 50%;
+    
+}
+
+.input-container {
+    background-color: indianred;
+    width: 40%;
+}
+
+.input-checkbox input{
+    background-color: lightgreen;
+    width: 16px;
+    margin-right: 12px;
+    float: left;
+}
+
+.input-textbox {
+    background-color: greenyellow;
+    width: 40%;
+}
+
+.input-textbox input {
+    width: 100%;
+}
+
+.dropdown {
+    font-size: 16px;
+}
