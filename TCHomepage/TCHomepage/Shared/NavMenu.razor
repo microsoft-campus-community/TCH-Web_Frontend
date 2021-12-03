@@ -1,0 +1,30 @@
+﻿<div class="top-row pl-4 navbar navbar-dark">
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<nav class="navbar">
+    <ul>
+        <li><a href="#home"><img src="/Images/Logo_Yellow.png" height="28" style="background: none;"></a></li>
+        <li><a href="#about">Die TCH</a></li>
+        <li><a href="#when-where">Wo und wann?</a></li>
+        <li><a href="#sessions">Sessions</a></li>
+        <li><a href="info-faq.html">FAQ</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="registrieren.html">Bin dabei!</a></li>
+        <!-- Anmeldung für Speaker und wichtige Leute-->
+        <li><a href="#login">Für Speaker</a></li>
+    </ul>
+</nav>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
