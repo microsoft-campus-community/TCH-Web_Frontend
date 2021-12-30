@@ -7,24 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[Test] Home | Technology Conference Hamburg</title>
     <link rel="stylesheet" href="./Styles/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="slide">
+    <header class="header">
         <nav class="navbar">
-            <ul>
-                <li><a href="#home"><img src="./Images/Logo_Yellow.png" height="28" style="background: none;"></a></li>
-                <li><a href="#about">Die TCH</a></li>
-                <li><a href="#when-where">Wo und wann?</a></li>
-                <li><a href="#sessions">Sessions</a></li>
-                <li><a href="info-faq.html">FAQ</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-                <li><a href="registrieren.html">Bin dabei!</a></li>
+            <a href="#home"><img src="./Images/Logo_Yellow.png" height="28" style="background: none;"></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#about" class="nav-link">Die TCH</a></li>
+                <li class="nav-item"><a href="#when-where" class="nav-link">Wo und wann?</a></li>
+                <li class="nav-item"><a href="#sessions" class="nav-link">Sessions</a></li>
+                <li class="nav-item"><a href="info-faq.html" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Kontakt</a></li>
+                <li class="nav-item"><a href="registrieren.html" class="nav-link">Bin dabei!</a></li>
                 <!-- Anmeldung für Speaker und wichtige Leute-->
-                <li><a href="#login">Für Speaker</a></li>
+                <li class="nav-item"><a href="#login" class="nav-link">Für Speaker</a></li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
+    </header>
+    <div class="slide">
         <section id="home">
             <div id="introHeader">
                 <h1>Lernen.</br>
@@ -33,14 +41,19 @@
                 </h1>
             </div>
             <div id="introText">
-                <p>Technology Conference Hamburg</br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum expedita maxime nulla quia, voluptatem non! Nisi aliquid rem quos? Vero, unde. Saepe, error amet. Quisquam!</p>
+                <p>
+                    Technology Conference Hamburg</br>
+                    Komm mit zur TCH - die von Studenten organisierte Veranstaltung bietet dir kostensloses Praxiswissen
+                    zum Mitnehmen und vieles mehr!
+                </p>
             </div>
         </section>
 
         <section id="about">
             <h1>Was ist die TCH?</h1>
-            <p>Die TCH bietet seit 2017? Technik-Wissen mit kostenlosen Vorträgen, Live-Demos und Workshops zu aktuellen
+            <p>
+                Die TCH bietet seit 2017? Technik-Wissen mit kostenlosen Vorträgen, Live-Demos und Workshops zu
+                aktuellen
                 Themen aus der Softwareentwicklung und dem IT-Professional
                 Bereich. Seid dabei und bringt euer Wissen auf das nächste Level. Der Eintritt ist kostenlos und die
                 Eintrittskarte erhaltet ihr nach der Anmeldung per E-Mail.
@@ -48,37 +61,62 @@
         </section>
 
         <section id="when-where">
-            <h1>Wo und wann?</h1>
-            <p>Die TCH findet am [Datum] statt</p> <br>
-            <p>Counter</p> <br>
-            <p>TT:HH:MM:SS</p>
-            <iframe width="480" height="320" style="border:0" loading="lazy" allowfullscreen
-                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJuRMYfoNhsUcRoDrWe_I9JgQ&key=AIzaSyDi2WjAdzaUgY1PZRKkBgmPmfSnqF5vmyw"></iframe>
+            <div id="timetable">
+                <div class="timetable-row">
+                    <h1>Wann?</h1>
+                    <hr>
+                    <p>
+                        Die TCH findet am [Datum] statt.
+                    </p>
+                    <p>Counter</p>
+                    <p>TT:HH:MM:SS</p>
+                </div>
+                <div class="timetable-row">
+                    <h1>Wo?</h1>
+                    <iframe width="480" height="320" style="border:0" loading="lazy" allowfullscreen
+                        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJuRMYfoNhsUcRoDrWe_I9JgQ&key=AIzaSyDi2WjAdzaUgY1PZRKkBgmPmfSnqF5vmyw"></iframe>
+                </div>
+            </div>
         </section>
 
         <section id="sessions">
             <div id="sessionArea">
                 <h1>Sessions</h1>
-                    <p>Die Speaker der TCH haben jahrelange Erfahrung auf ihrem Gebiet und sind genau so technikverrückt wie du! Hier findest du alle angebotenen Vortr&auml;ge und
-                        Workshops. Bestimmt ist auch für dich was dabei...
-                    </p>
+                <p>
+                    Die Speaker der TCH haben jahrelange Erfahrung auf ihrem Gebiet und sind genau so technikverrückt
+                    wie
+                    du! Hier findest du alle angebotenen Vortr&auml;ge und Workshops. Bestimmt ist auch für dich was
+                    dabei...
+                </p>
                 </br>
                 </br>
                 <div id="timetable">
                     <div class="timetable-row">
                         <h2>Vortr&auml;ge</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam harum adipisci, quod magni ab ratione iure voluptate, neque doloremque exercitationem autem
-                            sed dolorem? Suscipit, ex ipsam. Placeat consectetur quam, dolore exercitationem molestiae harum aperiam officia dolorem, voluptas commodi ea! Corrupti vitae
-                            soluta vel? Fugit pariatur aperiam possimus ullam eaque hic accusantium minus provident voluptates! Molestias quo consequatur atque odit! Laudantium nesciunt
-                            sint minus culpa ducimus, molestias nemo aliquid incidunt accusantium vel molestiae totam. Vero, obcaecati!
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam harum adipisci, quod magni
+                            ab
+                            ratione iure voluptate, neque doloremque exercitationem autem
+                            sed dolorem? Suscipit, ex ipsam. Placeat consectetur quam, dolore exercitationem molestiae
+                            harum aperiam officia dolorem, voluptas commodi ea! Corrupti vitae
+                            soluta vel? Fugit pariatur aperiam possimus ullam eaque hic accusantium minus provident
+                            voluptates! Molestias quo consequatur atque odit! Laudantium nesciunt
+                            sint minus culpa ducimus, molestias nemo aliquid incidunt accusantium vel molestiae totam.
+                            Vero, obcaecati!
                         </p>
                     </div>
                     <div class="timetable-row">
                         <h2>Workshops</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam harum adipisci, quod magni ab ratione iure voluptate, neque doloremque exercitationem autem
-                            sed dolorem? Suscipit, ex ipsam. Placeat consectetur quam, dolore exercitationem molestiae harum aperiam officia dolorem, voluptas commodi ea! Corrupti vitae
-                            soluta vel? Fugit pariatur aperiam possimus ullam eaque hic accusantium minus provident voluptates! Molestias quo consequatur atque odit! Laudantium nesciunt
-                            sint minus culpa ducimus, molestias nemo aliquid incidunt accusantium vel molestiae totam. Vero, obcaecati!
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam harum adipisci, quod magni
+                            ab
+                            ratione iure voluptate, neque doloremque exercitationem autem
+                            sed dolorem? Suscipit, ex ipsam. Placeat consectetur quam, dolore exercitationem molestiae
+                            harum aperiam officia dolorem, voluptas commodi ea! Corrupti vitae
+                            soluta vel? Fugit pariatur aperiam possimus ullam eaque hic accusantium minus provident
+                            voluptates! Molestias quo consequatur atque odit! Laudantium nesciunt
+                            sint minus culpa ducimus, molestias nemo aliquid incidunt accusantium vel molestiae totam.
+                            Vero, obcaecati!
                         </p>
                     </div>
                 </div>
@@ -87,8 +125,9 @@
 
         <section id="contact">
             <div id="contactArea">
-                    <h1>Lob, Kritik, Anerkennung?</h1>
-                    <p>Immer her damit! Wir versuchen uns stetig zu verbessern und jedes Feedback
+                <h1>Lob, Kritik, Anerkennung?</h1>
+                <p>
+                    Immer her damit! Wir versuchen uns stetig zu verbessern und jedes Feedback
                     hilft uns die nächste TCH noch besser zu gestalten.</p>
             </div>
             <div id="footerArea">
@@ -128,12 +167,12 @@
                     </br>
                     <div style="text-align: left;">
                         <p>Angaben gem&auml;&szlig; § 5 TMG
-                        </br>
-                        Microsoft Campus Community
-                        </br>
-                        Walter-Gropius-Straße 5
-                        </br>
-                        80807 M&uuml;nchen</p>
+                            </br>
+                            Microsoft Campus Community
+                            </br>
+                            Walter-Gropius-Straße 5
+                            </br>
+                            80807 M&uuml;nchen</p>
                         </br>
                         <a href="imprint.html" style="color: white; font-size: 18px;">Impressum und Datenschutz</a>
                     </div>
@@ -142,4 +181,6 @@
         </section>
     </div>
 </body>
+
+<script src="/Scripts/navmenu-resize.js"></script>
 </html>
