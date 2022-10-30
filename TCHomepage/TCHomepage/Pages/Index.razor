@@ -3,45 +3,53 @@
 @using TCHomepage.Data;
 
 <section id="home">
-	<div id="introHeader">
-		<h1>
-			Lernen.<br />
-			Verstehen.<br />
-			Ausprobieren.
-		</h1>
-	</div>
-	<div id="introText">
-		<p>
-			Technology Conference Hamburg<br />
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum expedita maxime nulla quia, voluptatem non! Nisi aliquid rem quos? Vero, unde. Saepe, error amet. Quisquam!
-		</p>
-	</div>
-</section>
+            <div id="introHeader">
+                <h1>Lernen.<br/>
+                    Verstehen.<br/>
+                    Ausprobieren.
+                </h1>
+            </div>
+            <div id="introText">
+                <p>
+                    Technology Conference Hamburg<br/>
+                    Komm mit zur TCH - die von Studenten organisierte Veranstaltung bietet dir kostenloses Praxiswissen
+                    zum Mitnehmen und vieles mehr!
+                </p>
+            </div>
+        </section>
 
-<section id="about">
-	<h1>Was ist die TCH?</h1>
-	<p>
-		Die TCH bietet seit 2017? Technik-Wissen mit kostenlosen Vorträgen, Live-Demos und Workshops zu aktuellen
-		Themen aus der Softwareentwicklung und dem IT-Professional
-		Bereich. Seid dabei und bringt euer Wissen auf das nächste Level. Der Eintritt ist kostenlos und die
-		Eintrittskarte erhaltet ihr nach der Anmeldung per E-Mail.
-	</p>
-</section>
+        <section id="about">
+            <h1>Was ist die TCH?</h1>
+            <p>
+                Die TCH bietet seit 2017? Technik-Wissen mit kostenlosen Vorträgen, Live-Demos und Workshops zu
+                aktuellen
+                Themen aus der Softwareentwicklung und dem IT-Professional
+                Bereich. Seid dabei und bringt euer Wissen auf das nächste Level. Der Eintritt ist kostenlos und die
+                Eintrittskarte erhaltet ihr nach der Anmeldung per E-Mail.
+            </p>
+        </section>
 
-<section id="when-where">
-	<h1>Wo und wann?</h1>
-	@foreach (var eventElement in currentEvent)
-	{
-		<p>Die @eventElement.Name findet am @eventElement.EventDate statt.</p>
-		<p>Beginn: @eventElement.StartTime</p>
-		<p>Ende: @eventElement.EndTime</p>
-		<p>Wo: @eventElement.Location</p>
-		<p>Preis: @eventElement.TicketFee</p>
+        <section id="when-where">
+            <div id="timetable">
+                <div class="timetable-row">
+                    <h1>Wann?</h1>
+                    @foreach (var eventElement in currentEvent)
+					{
+						<p>Die @eventElement.Name findet am @eventElement.EventDate statt.</p>
+						<p>Beginn: @eventElement.StartTime</p>
+						<p>Ende: @eventElement.EndTime</p>
+						<p>Wo: @eventElement.Location</p>
+						<p>Preis: @eventElement.TicketFee</p>
 
-	}
-	<!-- <iframe width="480" height="320" style="border:0" loading="lazy" allowfullscreen
-			src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJuRMYfoNhsUcRoDrWe_I9JgQ&key=AIzaSyDi2WjAdzaUgY1PZRKkBgmPmfSnqF5vmyw"></iframe> -->
-</section>
+					}
+                </div>
+                <div class="timetable-row">
+                    <h1>Wo?</h1>
+                    <iframe width="480" height="320" style="border:0" loading="lazy" allowfullscreen
+                        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJuRMYfoNhsUcRoDrWe_I9JgQ&key=AIzaSyDi2WjAdzaUgY1PZRKkBgmPmfSnqF5vmyw"></iframe>
+                </div>
+            </div>
+        </section>
 
 <section id="speaker">
 	<div id="speakerArea">
@@ -62,35 +70,47 @@
 </section>
 
 <section id="sessions">
-	<div id="sessionArea">
-		<h1>Sessions</h1>
-		<p>
-			Die Speaker der TCH haben jahrelange Erfahrung auf ihrem Gebiet und sind genau so technikverrückt wie du! Hier findest du alle angebotenen Vortr&auml;ge und
-			Workshops. Bestimmt ist auch für dich was dabei...
-		</p>
-		<br />
-		<br />
-		<div id="timetable">
-			<div class="timetable-row">
-				<h2>Vortr&auml;ge</h2>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam harum adipisci, quod magni ab ratione iure voluptate, neque doloremque exercitationem autem
-					sed dolorem? Suscipit, ex ipsam. Placeat consectetur quam, dolore exercitationem molestiae harum aperiam officia dolorem, voluptas commodi ea! Corrupti vitae
-					soluta vel? Fugit pariatur aperiam possimus ullam eaque hic accusantium minus provident voluptates! Molestias quo consequatur atque odit! Laudantium nesciunt
-					sint minus culpa ducimus, molestias nemo aliquid incidunt accusantium vel molestiae totam. Vero, obcaecati!
-				</p>
-			</div>
-			<div class="timetable-row">
-				<h2>Workshops</h2>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam harum adipisci, quod magni ab ratione iure voluptate, neque doloremque exercitationem autem
-					sed dolorem? Suscipit, ex ipsam. Placeat consectetur quam, dolore exercitationem molestiae harum aperiam officia dolorem, voluptas commodi ea! Corrupti vitae
-					soluta vel? Fugit pariatur aperiam possimus ullam eaque hic accusantium minus provident voluptates! Molestias quo consequatur atque odit! Laudantium nesciunt
-					sint minus culpa ducimus, molestias nemo aliquid incidunt accusantium vel molestiae totam. Vero, obcaecati!
-				</p>
-			</div>
-		</div>
-	</div>
+    <div id="sessionArea">
+        <h1>Sessions</h1>
+        <p>
+            Die Speaker der TCH haben jahrelange Erfahrung auf ihrem Gebiet und sind genau so technikverrückt
+            wie
+            du! Hier findest du alle angebotenen Vortr&auml;ge und Workshops. Bestimmt ist auch für dich was
+            dabei...
+        </p>
+        <br/>
+        <br/>
+        <div id="timetable">
+            <div class="timetable-row">
+                <h2>Vortr&auml;ge</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam harum adipisci, quod magni
+                    ab
+                    ratione iure voluptate, neque doloremque exercitationem autem
+                    sed dolorem? Suscipit, ex ipsam. Placeat consectetur quam, dolore exercitationem molestiae
+                    harum aperiam officia dolorem, voluptas commodi ea! Corrupti vitae
+                    soluta vel? Fugit pariatur aperiam possimus ullam eaque hic accusantium minus provident
+                    voluptates! Molestias quo consequatur atque odit! Laudantium nesciunt
+                    sint minus culpa ducimus, molestias nemo aliquid incidunt accusantium vel molestiae totam.
+                    Vero, obcaecati!
+                </p>
+            </div>
+            <div class="timetable-row">
+                <h2>Workshops</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam harum adipisci, quod magni
+                    ab
+                    ratione iure voluptate, neque doloremque exercitationem autem
+                    sed dolorem? Suscipit, ex ipsam. Placeat consectetur quam, dolore exercitationem molestiae
+                    harum aperiam officia dolorem, voluptas commodi ea! Corrupti vitae
+                    soluta vel? Fugit pariatur aperiam possimus ullam eaque hic accusantium minus provident
+                    voluptates! Molestias quo consequatur atque odit! Laudantium nesciunt
+                    sint minus culpa ducimus, molestias nemo aliquid incidunt accusantium vel molestiae totam.
+                    Vero, obcaecati!
+                </p>
+            </div>
+        </div>
+    </div>
 </section>
 
 @code {

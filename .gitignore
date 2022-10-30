@@ -102,3 +102,10 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Visual Studio files
+.vs/
+TCHomepage/.vs/
+TCHomepage/TCHomepage/.vs/
+TCHomepage/TCHomepage/bin/
+TCHomepage/TCHomepage/obj/
