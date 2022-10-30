@@ -104,6 +104,7 @@ dist
 .tern-port
 
 # Visual Studio files
+.vs
 .vs/
 TCHomepage/.vs/
 TCHomepage/TCHomepage/.vs/
