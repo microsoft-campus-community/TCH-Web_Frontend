@@ -90,7 +90,7 @@ using TCHomepage.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 21 "D:\dev\repos\tch-website\TCHomepage\TCHomepage\Shared\NavMenu.razor"
+#line 22 "D:\dev\repos\tch-website\TCHomepage\TCHomepage\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

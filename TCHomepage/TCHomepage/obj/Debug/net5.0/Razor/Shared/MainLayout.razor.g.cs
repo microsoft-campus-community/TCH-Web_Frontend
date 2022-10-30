@@ -90,15 +90,13 @@ using TCHomepage.Shared;
             __builder.OpenComponent<TCHomepage.Shared.NavMenu>(3);
             __builder.CloseComponent();
             __builder.AddMarkupContent(4, "\r\n\r\n    ");
-            __builder.AddContent(5, 
 #nullable restore
 #line 6 "D:\dev\repos\tch-website\TCHomepage\TCHomepage\Shared\MainLayout.razor"
-     Body
+__builder.AddContent(5, Body);
 
 #line default
 #line hidden
 #nullable disable
-            );
             __builder.AddMarkupContent(6, "\r\n    ");
             __builder.OpenElement(7, "section");
             __builder.AddAttribute(8, "id", "contact");

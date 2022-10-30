@@ -3,136 +3,171 @@
 @using TCHomepage.Data;
 
 <section id="home">
-    <div id="introHeader">
-        <h1>
-            Lernen.<br />
-            Verstehen.<br />
-            Ausprobieren.
-        </h1>
-    </div>
-    <div id="introText">
-        <p>
-            Technology Conference Hamburg<br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum expedita maxime nulla quia, voluptatem non! Nisi aliquid rem quos? Vero, unde. Saepe, error amet. Quisquam!
-        </p>
-    </div>
+	<div id="introHeader">
+		<h1>
+			Lernen.<br />
+			Verstehen.<br />
+			Ausprobieren.
+		</h1>
+	</div>
+	<div id="introText">
+		<p>
+			Technology Conference Hamburg<br />
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum expedita maxime nulla quia, voluptatem non! Nisi aliquid rem quos? Vero, unde. Saepe, error amet. Quisquam!
+		</p>
+	</div>
 </section>
 
 <section id="about">
-    <h1>Was ist die TCH?</h1>
-    <p>
-        Die TCH bietet seit 2017? Technik-Wissen mit kostenlosen Vorträgen, Live-Demos und Workshops zu aktuellen
-        Themen aus der Softwareentwicklung und dem IT-Professional
-        Bereich. Seid dabei und bringt euer Wissen auf das nächste Level. Der Eintritt ist kostenlos und die
-        Eintrittskarte erhaltet ihr nach der Anmeldung per E-Mail.
-    </p>
+	<h1>Was ist die TCH?</h1>
+	<p>
+		Die TCH bietet seit 2017? Technik-Wissen mit kostenlosen Vorträgen, Live-Demos und Workshops zu aktuellen
+		Themen aus der Softwareentwicklung und dem IT-Professional
+		Bereich. Seid dabei und bringt euer Wissen auf das nächste Level. Der Eintritt ist kostenlos und die
+		Eintrittskarte erhaltet ihr nach der Anmeldung per E-Mail.
+	</p>
 </section>
 
 <section id="when-where">
-    <h1>Wo und wann?</h1>
-    <p>Die TCH findet am [Datum] statt</p> <br>
-    <p>Counter</p> <br>
-    <p>TT:HH:MM:SS</p>
-    <iframe width="480" height="320" style="border:0" loading="lazy" allowfullscreen
-            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJuRMYfoNhsUcRoDrWe_I9JgQ&key=AIzaSyDi2WjAdzaUgY1PZRKkBgmPmfSnqF5vmyw"></iframe>
+	<h1>Wo und wann?</h1>
+	@foreach (var eventElement in currentEvent)
+	{
+		<p>Die @eventElement.Name findet am @eventElement.EventDate statt.</p>
+		<p>Beginn: @eventElement.StartTime</p>
+		<p>Ende: @eventElement.EndTime</p>
+		<p>Wo: @eventElement.Location</p>
+		<p>Preis: @eventElement.TicketFee</p>
+
+	}
+	<!-- <iframe width="480" height="320" style="border:0" loading="lazy" allowfullscreen
+			src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJuRMYfoNhsUcRoDrWe_I9JgQ&key=AIzaSyDi2WjAdzaUgY1PZRKkBgmPmfSnqF5vmyw"></iframe> -->
+</section>
+
+<section id="speaker">
+	<div id="speakerArea">
+		<h1>Speaker</h1>
+		<div id="speakerSection" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around;">
+			@foreach (var speaker in speakers)
+			{
+				<div class="speaker">
+					<h2>@speaker.Name</h2>
+					<p>Bio: @speaker.Bio</p>
+					<p>Organisation: @speaker.Organization</p>
+					<p>Twitter: @speaker.Twitter</p>
+					<p>Website: @speaker.Website</p>
+				</div>
+			}
+		</div>
+	</div>
 </section>
 
 <section id="sessions">
-    <div id="sessionArea">
-        <h1>Sessions</h1>
-        <p>
-            Die Speaker der TCH haben jahrelange Erfahrung auf ihrem Gebiet und sind genau so technikverrückt wie du! Hier findest du alle angebotenen Vortr&auml;ge und
-            Workshops. Bestimmt ist auch für dich was dabei...
-        </p>
-        <br />
-        <br />
-        <div id="speakerSection" style="display: flex; flex-direction: row; flex-wrap: wrap">
-            @foreach (var speaker in speakers)
-            {
-                <div class="speaker">
-                    <h2>@speaker.Name</h2>
-                    <br>
-                    <p>Bio: @speaker.Bio</p>
-                    <p>Organisation: @speaker.Organization</p>
-                    <p>Twitter: @speaker.Twitter</p>
-                    <p>Website: @speaker.Website</p>
-                </div>
-            }
-        </div>
-        <div id="timetable">
-            <div class="timetable-row">
-                <h2>Vortr&auml;ge</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam harum adipisci, quod magni ab ratione iure voluptate, neque doloremque exercitationem autem
-                    sed dolorem? Suscipit, ex ipsam. Placeat consectetur quam, dolore exercitationem molestiae harum aperiam officia dolorem, voluptas commodi ea! Corrupti vitae
-                    soluta vel? Fugit pariatur aperiam possimus ullam eaque hic accusantium minus provident voluptates! Molestias quo consequatur atque odit! Laudantium nesciunt
-                    sint minus culpa ducimus, molestias nemo aliquid incidunt accusantium vel molestiae totam. Vero, obcaecati!
-                </p>
-            </div>
-            <div class="timetable-row">
-                <h2>Workshops</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam harum adipisci, quod magni ab ratione iure voluptate, neque doloremque exercitationem autem
-                    sed dolorem? Suscipit, ex ipsam. Placeat consectetur quam, dolore exercitationem molestiae harum aperiam officia dolorem, voluptas commodi ea! Corrupti vitae
-                    soluta vel? Fugit pariatur aperiam possimus ullam eaque hic accusantium minus provident voluptates! Molestias quo consequatur atque odit! Laudantium nesciunt
-                    sint minus culpa ducimus, molestias nemo aliquid incidunt accusantium vel molestiae totam. Vero, obcaecati!
-                </p>
-            </div>
-        </div>
-    </div>
+	<div id="sessionArea">
+		<h1>Sessions</h1>
+		<p>
+			Die Speaker der TCH haben jahrelange Erfahrung auf ihrem Gebiet und sind genau so technikverrückt wie du! Hier findest du alle angebotenen Vortr&auml;ge und
+			Workshops. Bestimmt ist auch für dich was dabei...
+		</p>
+		<br />
+		<br />
+		<div id="timetable">
+			<div class="timetable-row">
+				<h2>Vortr&auml;ge</h2>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam harum adipisci, quod magni ab ratione iure voluptate, neque doloremque exercitationem autem
+					sed dolorem? Suscipit, ex ipsam. Placeat consectetur quam, dolore exercitationem molestiae harum aperiam officia dolorem, voluptas commodi ea! Corrupti vitae
+					soluta vel? Fugit pariatur aperiam possimus ullam eaque hic accusantium minus provident voluptates! Molestias quo consequatur atque odit! Laudantium nesciunt
+					sint minus culpa ducimus, molestias nemo aliquid incidunt accusantium vel molestiae totam. Vero, obcaecati!
+				</p>
+			</div>
+			<div class="timetable-row">
+				<h2>Workshops</h2>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam harum adipisci, quod magni ab ratione iure voluptate, neque doloremque exercitationem autem
+					sed dolorem? Suscipit, ex ipsam. Placeat consectetur quam, dolore exercitationem molestiae harum aperiam officia dolorem, voluptas commodi ea! Corrupti vitae
+					soluta vel? Fugit pariatur aperiam possimus ullam eaque hic accusantium minus provident voluptates! Molestias quo consequatur atque odit! Laudantium nesciunt
+					sint minus culpa ducimus, molestias nemo aliquid incidunt accusantium vel molestiae totam. Vero, obcaecati!
+				</p>
+			</div>
+		</div>
+	</div>
 </section>
 
 @code {
-    private Speaker[] speakers = Array.Empty<Speaker>();
+	private Speaker[] speakers = Array.Empty<Speaker>();
+	private Event[] currentEvent = Array.Empty<Event>();
 
-    protected override async Task OnInitializedAsync()
-    {
-        await GetSpeaker();
-        await InvokeAsync(() =>
-        {
-            StateHasChanged();
-        });
+	protected override async Task OnInitializedAsync()
+	{
+		await GetCurrentEvent();
+		await GetSpeaker();
+		await InvokeAsync(() =>
+		{
+			StateHasChanged();
+		});
 
-    }
+	}
 
-    private async Task GetSpeaker()
-    {
-        var speakerIDs = await GetSpeakerIDs();
-        List<Speaker> speakerList = new List<Speaker>();
+	private async Task GetSpeaker()
+	{
+		var speakerIDs = await GetSpeakerIDs();
+		List<Speaker> speakerList = new List<Speaker>();
 
-        foreach(var id in speakerIDs)
-        {
-            var request = new HttpRequestMessage(HttpMethod.Get, "https://bems.tc-hamburg.com/api/getSpeakerByID?id=" + id);
-            request.Headers.Add("Accept", "application/json");
+		if (speakerIDs != null)
+		{
+			foreach (var id in speakerIDs)
+			{
+				var request = new HttpRequestMessage(HttpMethod.Get, "https://bems.tc-hamburg.com/api/GetSpeakerByID?id=" + id);
+				request.Headers.Add("Accept", "application/json");
 
-            var client = new HttpClient();
-            var response = await client.SendAsync(request);
+				var client = new HttpClient();
+				var response = await client.SendAsync(request);
 
-            if (response.IsSuccessStatusCode)
-            {
-                var data = await response.Content.ReadAsStringAsync();
-                speakerList.Add(JsonSerializer.Deserialize<Speaker>(data));
-            }
-        }
+				if (response.IsSuccessStatusCode)
+				{
+					var data = await response.Content.ReadAsStringAsync();
+					speakerList.Add(JsonSerializer.Deserialize<Speaker>(data));
+				}
+			}
+		}
 
-        speakers = speakerList.ToArray();
-    }
+		speakers = speakerList.ToArray();
+	}
 
-    private async Task<string[]> GetSpeakerIDs()
-    {
-        var request = new HttpRequestMessage(HttpMethod.Get, "https://bems.tc-hamburg.com/api/requestSpeakerIDs");
-        request.Headers.Add("Accept", "application/json");
+	private async Task<string[]> GetSpeakerIDs()
+	{
+		var request = new HttpRequestMessage(HttpMethod.Get, "https://bems.tc-hamburg.com/api/GetSpeakerIDs");
+		request.Headers.Add("Accept", "application/json");
 
-        var client = new HttpClient();
-        var response = await client.SendAsync(request);
+		var client = new HttpClient();
+		var response = await client.SendAsync(request);
 
-        string[] id = null;
-        if (response.IsSuccessStatusCode)
-        {
-            var data = await response.Content.ReadAsStringAsync();
-            id = JsonSerializer.Deserialize<string[]>(data);
-        }
+		string[] id = null;
+		if (response.IsSuccessStatusCode)
+		{
+			var data = await response.Content.ReadAsStringAsync();
+			id = JsonSerializer.Deserialize<string[]>(data);
+		}
 
-        return id;
-    }
+		return id;
+	}
+
+	private async Task GetCurrentEvent()
+	{
+		List<Event> currentEventList = new List<Event>();
+
+		var request = new HttpRequestMessage(HttpMethod.Get, "https://bems.tc-hamburg.com/api/GetCurrentEvent");
+		request.Headers.Add("Accept", "application/json");
+
+		var client = new HttpClient();
+		var response = await client.SendAsync(request);
+
+		if (response.IsSuccessStatusCode)
+		{
+			var data = await response.Content.ReadAsStringAsync();
+			currentEventList.Add(JsonSerializer.Deserialize<Event>(data));
+		}
+
+		currentEvent = currentEventList.ToArray();
+	}
 }

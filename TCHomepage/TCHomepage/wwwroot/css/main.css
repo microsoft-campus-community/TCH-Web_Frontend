@@ -172,23 +172,42 @@ section {
     font-size: 36px;
 }
 
+#speakerArea {
+    width: 90%;
+    text-align: left;
+}
+
 .speaker {
-    height: 400px;
-    width: 300px;
+    height: 350px;
+    width: 250px;
     border: 2px solid var(--color-primary);
-    border-radius: 15px;
+    border-radius: 20px;
+    margin-bottom: 25px;
 }
 
     .speaker h2 {
-        border-bottom: 1px solid var(--color-secondary);
         text-align: center;
-        padding: 10px 10px;
+        margin-top: 10px;
     }
 
     .speaker p {
         margin-left: 20px;
-        line-height: 3rem;
+        font-size: 14px;
     }
+
+.speaker-picture {
+    height: 350px;
+    width: 250px;
+    border: 2px solid var(--color-primary);
+    border-radius: 20px;
+    margin-bottom: 25px;
+    background-color: aqua;
+    display: none;
+}
+
+.speaker:hover {
+    background-color: teal;
+}
 
 #contactArea {
     float: left;

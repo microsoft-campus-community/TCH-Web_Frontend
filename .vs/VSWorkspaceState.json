@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TCHomepage",
+    "\\TCHomepage\\TCHomepage",
+    "\\TCHomepage\\TCHomepage\\Pages"
   ],
+  "SelectedNode": "\\TCHomepage\\TCHomepage\\Pages\\Index.razor",
   "PreviewInSolutionExplorer": false
 }

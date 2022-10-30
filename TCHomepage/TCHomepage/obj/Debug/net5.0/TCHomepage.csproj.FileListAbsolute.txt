@@ -6,7 +6,6 @@ D:\dev\repos\tch-website\TCHomepage\TCHomepage\bin\Debug\net5.0\TCHomepage.deps.
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\bin\Debug\net5.0\TCHomepage.runtimeconfig.json
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\bin\Debug\net5.0\TCHomepage.runtimeconfig.dev.json
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\bin\Debug\net5.0\TCHomepage.dll
-D:\dev\repos\tch-website\TCHomepage\TCHomepage\bin\Debug\net5.0\ref\TCHomepage.dll
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\bin\Debug\net5.0\TCHomepage.pdb
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\bin\Debug\net5.0\TCHomepage.Views.dll
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\bin\Debug\net5.0\TCHomepage.Views.pdb
@@ -18,10 +17,8 @@ D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\TCHomepage.cspro
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\TCHomepage.MvcApplicationPartsAssemblyInfo.cache
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\TCHomepage.RazorComponent.input.cache
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
-D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\RazorDeclaration\Shared\FooterArea.razor.g.cs
-D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
@@ -31,10 +28,8 @@ D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\TCHomepage.TagHe
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\TCHomepage.TagHelpers.output.cache
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\TCHomepage.RazorCoreGenerate.cache
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\Razor\App.razor.g.cs
-D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\Razor\Shared\FooterArea.razor.g.cs
-D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
@@ -56,3 +51,4 @@ D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\ref\TCHomepage.d
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\TCHomepage.pdb
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\TCHomepage.genruntimeconfig.cache
 D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\TCHomepage.csproj.CopyComplete
+D:\dev\repos\tch-website\TCHomepage\TCHomepage\obj\Debug\net5.0\refint\TCHomepage.dll

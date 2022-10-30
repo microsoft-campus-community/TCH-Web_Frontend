@@ -105,60 +105,84 @@ using TCHomepage.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 85 "D:\dev\repos\tch-website\TCHomepage\TCHomepage\Pages\Index.razor"
+#line 96 "D:\dev\repos\tch-website\TCHomepage\TCHomepage\Pages\Index.razor"
        
-    private Speaker[] speakers = Array.Empty<Speaker>();
+	private Speaker[] speakers = Array.Empty<Speaker>();
+	private Event[] currentEvent = Array.Empty<Event>();
 
-    protected override async Task OnInitializedAsync()
-    {
-        await GetSpeaker();
-        await InvokeAsync(() =>
-        {
-            StateHasChanged();
-        });
+	protected override async Task OnInitializedAsync()
+	{
+		await GetCurrentEvent();
+		await GetSpeaker();
+		await InvokeAsync(() =>
+		{
+			StateHasChanged();
+		});
 
-    }
+	}
 
-    private async Task GetSpeaker()
-    {
-        var speakerIDs = await GetSpeakerIDs();
-        List<Speaker> speakerList = new List<Speaker>();
+	private async Task GetSpeaker()
+	{
+		var speakerIDs = await GetSpeakerIDs();
+		List<Speaker> speakerList = new List<Speaker>();
 
-        foreach(var id in speakerIDs)
-        {
-            var request = new HttpRequestMessage(HttpMethod.Get, "https://bems.tc-hamburg.com/api/getSpeakerByID?id=" + id);
-            request.Headers.Add("Accept", "application/json");
+		if (speakerIDs != null)
+		{
+			foreach (var id in speakerIDs)
+			{
+				var request = new HttpRequestMessage(HttpMethod.Get, "https://bems.tc-hamburg.com/api/GetSpeakerByID?id=" + id);
+				request.Headers.Add("Accept", "application/json");
 
-            var client = new HttpClient();
-            var response = await client.SendAsync(request);
+				var client = new HttpClient();
+				var response = await client.SendAsync(request);
 
-            if (response.IsSuccessStatusCode)
-            {
-                var data = await response.Content.ReadAsStringAsync();
-                speakerList.Add(JsonSerializer.Deserialize<Speaker>(data));
-            }
-        }
+				if (response.IsSuccessStatusCode)
+				{
+					var data = await response.Content.ReadAsStringAsync();
+					speakerList.Add(JsonSerializer.Deserialize<Speaker>(data));
+				}
+			}
+		}
 
-        speakers = speakerList.ToArray();
-    }
+		speakers = speakerList.ToArray();
+	}
 
-    private async Task<string[]> GetSpeakerIDs()
-    {
-        var request = new HttpRequestMessage(HttpMethod.Get, "https://bems.tc-hamburg.com/api/requestSpeakerIDs");
-        request.Headers.Add("Accept", "application/json");
+	private async Task<string[]> GetSpeakerIDs()
+	{
+		var request = new HttpRequestMessage(HttpMethod.Get, "https://bems.tc-hamburg.com/api/GetSpeakerIDs");
+		request.Headers.Add("Accept", "application/json");
 
-        var client = new HttpClient();
-        var response = await client.SendAsync(request);
+		var client = new HttpClient();
+		var response = await client.SendAsync(request);
 
-        string[] id = null;
-        if (response.IsSuccessStatusCode)
-        {
-            var data = await response.Content.ReadAsStringAsync();
-            id = JsonSerializer.Deserialize<string[]>(data);
-        }
+		string[] id = null;
+		if (response.IsSuccessStatusCode)
+		{
+			var data = await response.Content.ReadAsStringAsync();
+			id = JsonSerializer.Deserialize<string[]>(data);
+		}
 
-        return id;
-    }
+		return id;
+	}
+
+	private async Task GetCurrentEvent()
+	{
+		List<Event> currentEventList = new List<Event>();
+
+		var request = new HttpRequestMessage(HttpMethod.Get, "https://bems.tc-hamburg.com/api/GetCurrentEvent");
+		request.Headers.Add("Accept", "application/json");
+
+		var client = new HttpClient();
+		var response = await client.SendAsync(request);
+
+		if (response.IsSuccessStatusCode)
+		{
+			var data = await response.Content.ReadAsStringAsync();
+			currentEventList.Add(JsonSerializer.Deserialize<Event>(data));
+		}
+
+		currentEvent = currentEventList.ToArray();
+	}
 
 #line default
 #line hidden
